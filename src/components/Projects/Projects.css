@@ -1,0 +1,144 @@
+
+
+.projects {
+    padding: 20px;
+    text-align: center; 
+  }
+  
+/* Existing CSS */
+.projects-heading {
+  font-size: 5rem !important;
+  margin-bottom: 50px;
+  color: #333;
+}
+  .projects-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; 
+  }
+  
+  .project-item {
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease; 
+    transform: translateY(20px); 
+  }
+  
+  .project-item.animate {
+    opacity: 1; 
+    transform: translateY(0);
+  }
+  
+  .project-image {
+    width: 800px; 
+    height: auto; 
+    margin-left: 50px; 
+    margin-right: 100px;
+  }
+  
+  .project-info {
+    flex: 1; 
+    text-align: left; 
+  }
+  
+  .project-title {
+    font-size: 45px; 
+    margin: 0 0 50px; 
+  }
+  
+  .project-description {
+    font-size: 17px; 
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 20px; 
+  }
+  
+  .demo-button {
+    font-weight: 300;
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #620160;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+
+  /* Responsive Media Queries */
+
+/* For small devices (phones, 600px and below) */
+@media (max-width: 600px) {
+  .projects-heading {
+    font-size: 24px; 
+  }
+
+  .projects-grid {
+    gap: 20px;
+  }
+
+  .project-item {
+    flex-direction: column; 
+    align-items: center;
+  }
+
+  .project-image {
+    width: 100%;
+    margin-left: 0; 
+    margin-right: 0;
+    margin-bottom: 20px; 
+  }
+
+  .project-title {
+    font-size: 28px; 
+    margin-bottom: 15px; 
+  }
+
+  .project-description {
+    font-size: 14px; 
+    text-align: center;
+  }
+
+  .demo-button {
+    padding: 8px 12px;
+    font-size: 14px; 
+    margin-top: 10px; 
+  }
+}
+
+/* For medium devices (tablets, 768px and below) */
+@media (max-width: 768px) {
+  .projects-heading {
+    font-size: 28px;
+  }
+
+  .projects-grid {
+    gap: 30px; 
+  }
+
+  .project-item {
+    flex-direction: column; 
+    align-items: center;
+  }
+
+  .project-image {
+    width: 100%;
+    margin-left: 0; 
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .project-title {
+    font-size: 32px;
+    text-align: center; 
+  }
+
+  .project-description {
+    font-size: 14px;
+    text-align: center; 
+  }
+
+  .demo-button {
+    padding: 9px 13px;
+    margin-top: 10px; 
+  }
+}

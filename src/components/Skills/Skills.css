@@ -1,0 +1,153 @@
+/* Skills Section Styling */
+.skills {
+    padding: 50px 0; 
+    background-color: #f0f0f0; 
+    text-align: center; 
+  }
+  
+  .skills h2 {
+    font-size: 5rem !important; /* Force the font size to change */
+    margin-bottom: 50px;
+    color: #333;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: transform 1s ease-out, opacity 1s ease-out;
+  }
+  
+  
+  
+  .skills h2.in-view {
+    transform: translateX(0); /* Slide into place */
+    opacity: 1; /* Fade in */
+  }
+  
+  /* Grid Layout for Skills */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 20px;
+    padding: 0 2px; 
+    max-width: 1300px; 
+    margin: 0 auto;
+  }
+  
+  .skill-item {
+    background-color: #fff; 
+    padding: 20px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+    transition: transform 0.3s ease; 
+  }
+  
+  .skill-item:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+  }
+  
+  .skill-item img {
+    max-width: 120px; /* Restrict logo size */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Space below the logo */
+  }
+  
+  .skill-item p {
+    font-size: 1.2rem; /* Size of the skill name text */
+    color: #666; /* Medium grey text color */
+    margin: 0; /* Remove default margin */
+  }
+  /* Responsive Media Queries */
+
+/* For small devices (phones, 600px and below) */
+@media (max-width: 600px) {
+  .skills h2 {
+    font-size: 2rem; /* Smaller heading size */
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust grid to smaller columns */
+    gap: 15px; /* Smaller gap between grid items */
+  }
+
+  .skill-item {
+    padding: 15px; /* Reduce padding for smaller screens */
+  }
+
+  .skill-item img {
+    max-width: 100px; /* Reduce logo size */
+  }
+
+  .skill-item p {
+    font-size: 1rem; /* Smaller font size for skill name */
+  }
+}
+
+/* For medium devices (tablets, 768px and below) */
+@media (max-width: 768px) {
+  .skills h2 {
+    font-size: 2.2rem; /* Slightly smaller heading */
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Adjust grid for tablet screens */
+    gap: 18px; /* Slightly smaller gap */
+  }
+
+  .skill-item {
+    padding: 18px; /* Adjust padding */
+  }
+
+  .skill-item img {
+    max-width: 110px; /* Adjust image size */
+  }
+
+  .skill-item p {
+    font-size: 1.1rem; /* Adjust font size */
+  }
+}
+
+/* For large devices (desktops, 1024px and below) */
+@media (max-width: 1024px) {
+  .skills h2 {
+    font-size: 2.4rem; /* Reduce heading size slightly */
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* Adjust grid for larger screens */
+  }
+
+  .skill-item {
+    padding: 20px; /* Maintain padding */
+  }
+
+  .skill-item img {
+    max-width: 120px; /* Maintain image size */
+  }
+
+  .skill-item p {
+    font-size: 1.2rem; /* Maintain text size */
+  }
+}
+
+/* For extra-large devices (large desktops, 1200px and above) */
+@media (min-width: 1200px) {
+  .skills h2 {
+    font-size: 2.5rem; /* Keep heading size */
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Keep default grid setup */
+  }
+
+  .skill-item {
+    padding: 20px;
+  }
+
+  .skill-item img {
+    max-width: 120px;
+  }
+
+  .skill-item p {
+    font-size: 1.2rem;
+  }
+}
+
+  

@@ -1,0 +1,40 @@
+/* Navbar styles */
+.navbar {
+    background-color: white; /* Navbar background color */
+    color: black; /* Text color */
+    padding: 10px 20px; /* Padding around the navbar */
+    display: flex; /* Flex layout */
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Center items vertically */
+  }
+  
+  /* Navbar left section */
+  .navbar-left {
+    display: flex;
+    align-items: center; /* Center items vertically */
+  }
+  
+  /* Name styling */
+  .name {
+    margin-left: 40px; /* Space between name and hamburger */
+    font-size: 20px; /* Font size for the name */
+    font-weight: bold; /* Bold text */
+    margin-top: .5em;
+    margin-bottom: 1em;
+  }
+  
+  /* Social icons styles */
+  .social-icons {
+    display: flex; /* Flex layout for icons */
+    align-items: center; /* Center icons vertically */
+  }
+  
+  .social-icons a {
+    margin-left: 15px; /* Space between icons */
+    font-size: 20px; /* Icon size */
+    transition: color 0.3s ease; /* Transition effect for hover */
+  }
+  
+ 
+ 
+  

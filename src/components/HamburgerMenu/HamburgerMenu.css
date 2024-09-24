@@ -1,0 +1,102 @@
+/* Basic reset for box sizing */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Hamburger icon styles */
+.hamburger {
+  width: 50px;
+  height: 50px;
+  background-color: black; /* Black circle */
+  border-radius: 50%; /* Makes the shape a circle */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: fixed; /* Allows absolute positioning of spans inside */
+  top: 10px;
+  left: 7px;
+  z-index: 1;
+}
+
+.hamburger span {
+  position: absolute; /* Allow absolute positioning for each span */
+  width: 25px; /* Width of the bars */
+  height: 3px; /* Height (thickness) of the bars */
+  background-color: white; /* White color for the bars */
+  transition: all 0.3s ease; /* Smooth transition for animations */
+}
+
+.hamburger span:nth-child(1) {
+  top: 12px; /* Position the top bar */
+}
+
+.hamburger span:nth-child(2) {
+  top: 22px; /* Position the middle bar */
+}
+
+.hamburger span:nth-child(3) {
+  top: 32px; /* Position the bottom bar */
+}
+
+/* The menu that slides in */
+.menu {
+    position: fixed;
+    top: 0;
+    right: -400px; /* Hidden off-screen initially */
+    width: 350px;
+    height: 100%;
+    background-color: #000000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.5s ease;
+    z-index: 999; /* Ensure it's on top but below the hamburger */
+}
+
+/* Menu open state */
+.menu.open {
+    left: 0; /* Slide in from the right */
+}
+
+/* Styling the menu links */
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 35px;
+    margin: 20px 0; /* Spacing between links */
+    display: block;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: #680066;; /* Hover color for links */
+}
+
+/* Close button styles */
+.close-button {
+    position: absolute; 
+    top: 20px; 
+    left: 20px; 
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 50px;
+    cursor: pointer;
+    z-index: 1000; 
+}
+
+.close-button:hover {
+    color:#680066;; 
+}

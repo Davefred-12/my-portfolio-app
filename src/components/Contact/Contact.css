@@ -1,0 +1,244 @@
+.contact-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 50px; 
+    font-size: larger; 
+    background-color: #f0f0f0;
+  }
+  
+  .contact-info {
+    width: 40%;
+  
+  }
+  
+  .contact-info h1 {
+    margin-top: -1em;
+    font-size: 80px; 
+    margin-bottom: 30px;
+  }
+  
+  .contact-info p {
+    font-size: 15px; 
+    margin-bottom: -5px;
+  }
+  .contact-info b{
+    font-size: 20px;
+  }
+  .phone-form-container {
+    width: 40%; 
+  }
+  
+  .phone-animation {
+    width: 120px; 
+    height: 120px;
+    background-color: #ccc; 
+    animation: animatePhone 1s forwards;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+    opacity: 0;
+    animation: fadeInForm 1s forwards;
+    animation-delay: 1s; 
+  }
+  
+  @keyframes animatePhone {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0); 
+    }
+  }
+  
+  @keyframes fadeInForm {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1; 
+    }
+  }
+  
+  .contact-form input {
+    padding: 10px;
+    font-size: 15px; 
+    margin-bottom: 15px; 
+    border-radius: 5px;
+    border: 2px solid white;
+    background: transparent;
+    font-weight: bold;
+  }
+  
+  .contact-form button {
+    padding: 15px 20px;
+    font-size: 20px; 
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    border: 2px solid white;
+    background-color: #620160;
+  }
+
+  .contact-form textarea{
+    padding: 70px;
+    font-size: 18px;
+    margin-bottom: 15px; 
+    border-radius: 5px;
+    border: 2px solid white;
+    text-align: left;
+    background: transparent;
+    font-weight: bold;
+  }
+
+/* Responsive Media Queries */
+
+/* For small devices (phones, 600px and below) */
+@media (max-width: 600px) {
+  .contact-container {
+    flex-direction: column; 
+    padding: 20px;
+    font-size: medium;
+  }
+
+  .contact-info, .phone-form-container {
+    width: 100%;
+    text-align: center; 
+  }
+
+  .contact-info h1 {
+    font-size: 36px;
+  }
+
+  .contact-info p {
+    font-size: 14px; 
+  }
+
+  .contact-info b {
+    font-size: 18px; 
+  }
+
+  .contact-form input, .contact-form textarea {
+    font-size: 14px;
+    padding: 10px; 
+  }
+
+  .contact-form button {
+    font-size: 16px; 
+    padding: 12px 15px; 
+  }
+
+  .contact-form textarea {
+    padding: 20px; 
+  }
+}
+
+/* For medium devices (tablets, 768px and below) */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column; 
+    padding: 30px; 
+  }
+
+  .contact-info, .phone-form-container {
+    width: 100%; 
+    text-align: center; 
+  }
+
+  .contact-info h1 {
+    font-size: 48px; 
+  }
+
+  .contact-info p {
+    font-size: 14px; 
+  }
+
+  .contact-info b {
+    font-size: 18px;
+  }
+
+  .contact-form input, .contact-form textarea {
+    font-size: 15px; 
+    padding: 12px; 
+  }
+
+  .contact-form button {
+    font-size: 18px; 
+    padding: 12px 18px;
+  }
+
+  .contact-form textarea {
+    padding: 50px; 
+  }
+}
+
+/* For large devices (desktops, 1024px and below) */
+@media (max-width: 1024px) {
+  .contact-container {
+    padding: 40px; 
+  }
+
+  .contact-info {
+    width: 50%; 
+  }
+
+  .phone-form-container {
+    width: 50%; 
+  }
+
+  .contact-info h1 {
+    font-size: 60px; 
+  }
+
+  .contact-form input, .contact-form textarea {
+    font-size: 16px; 
+    padding: 10px; 
+  }
+
+  .contact-form button {
+    font-size: 19px; 
+    padding: 14px 20px; 
+  }
+
+  .contact-form textarea {
+    padding: 90px;
+  }
+}
+
+/* For extra-large devices (large desktops, 1200px and above) */
+@media (min-width: 1200px) {
+  .contact-container {
+    padding: 50px; 
+  }
+
+  .contact-info {
+    width: 40%; 
+  }
+
+  .phone-form-container {
+    width: 40%; 
+  }
+
+  .contact-info h1 {
+    font-size: 70px; 
+  }
+
+  .contact-form input, .contact-form textarea {
+    font-size: 18px; 
+    padding: 20px;
+  }
+
+  .contact-form button {
+    font-size: 20px; 
+    padding: 15px 20px;
+  }
+
+  .contact-form textarea {
+    padding: 70px; 
+  }
+}
+
+

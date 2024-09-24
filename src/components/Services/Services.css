@@ -1,0 +1,126 @@
+/* Services Section */
+.services {
+    padding: 50px;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+/* Slide in from the left */
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%); 
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); 
+  }
+}
+
+/* Slide in from the right */
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%); 
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); 
+  }
+}
+
+/* Initial state (hidden) */
+.services h2 {
+  font-size: 5rem;
+  margin-bottom: 20px;
+  color: #333;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out; 
+}
+
+/* Apply slide-in from left */
+.services h2.left-slide {
+  animation: slideInLeft 1s ease forwards; 
+}
+
+/* Apply slide-in from right */
+.services h2.right-slide {
+  animation: slideInRight 1s ease forwards; 
+}
+
+  
+  /* Service List */
+  .service-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border: 2px solid black;
+  }
+  
+  .service-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    height: 50vh;
+    margin: 20px;
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .service-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .service-item h3 {
+    font-size: 1.5rem;
+    color: #4a4a4a;
+    margin-bottom: 15px;
+  }
+  
+  .service-item p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+  }
+  
+  /* Exhaustible Intro Section */
+  .service-intro {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 40px;
+  }
+  
+  .service-intro h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #000000;
+  }
+  
+  .service-intro p {
+    font-size: 1.1rem;
+    color: #000000;
+    line-height: 1.8;
+    margin-bottom: 15px;
+  }
+  
+  /* Explore Work Button */
+  .explore-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background:transparent;
+    color: #000000;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    border: 1px solid white;
+  }
+  
+  .explore-btn:hover {
+    background-color: #680066;
+    color: white;
+  }
+  
