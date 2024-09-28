@@ -3,8 +3,9 @@ import React from 'react';
 import './Hero.css';
 import { Link } from 'react-scroll'; // For smooth scrolling
 
-// Import the image
-import pcImage from '../../assets/images/pc.jpg';
+import pcImage from '@assets/images/pc.jpg';
+
+
 
 const Hero = () => {
   return (

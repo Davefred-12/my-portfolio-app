@@ -1,5 +1,10 @@
-export default {
-  server: {
-    // No proxy needed if you're not using a backend server anymore
+// vite.config.js
+import { defineConfig } from 'vite';
+
+export default defineConfig({
+  resolve: {
+    alias: {
+      '@assets': '/src/assets',
+    },
   },
-};
+});
