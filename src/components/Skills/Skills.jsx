@@ -1,20 +1,32 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useEffect, useRef } from 'react';
 import './Skills.css';
+import htmlImage from '/src/assets/Images/html.png';
+import cssImage from '/src/assets/Images/css.jpg';
+import jsImage from '/src/assets/Images/js.png';
+import reactImage from '/src/assets/Images/react.png';
+import figmaImage from '/src/assets/Images/pi.png';
+import expressImage from '/src/assets/Images/express-js.png';
+import gitImage from '/src/assets/Images/ph.png';
+import mongoImage from '/src/assets/Images/pj.png';
+import photoshopImage from '/src/assets/Images/pl.jpg';
+import nodeImage from '/src/assets/Images/pm.png';
+import problemSolvingImage from '/src/assets/Images/pp.png';
+import teamworkImage from '/src/assets/Images/po.jpg';
 
 const skills = [
-  { name: 'HTML', image: '/src/assets/Images/html.png' },
-  { name: 'CSS', image: '/src/assets/Images/css.jpg' },
-  { name: 'JavaScript', image: '/src/assets/Images/js.png' },
-  { name: 'React', image: '/src/assets/Images/react.png' },
-  { name: 'Figma', image: '/src/assets/Images/pi.png' },
-  { name: 'ExpressJs', image: '/src/assets/Images/express-js.png' },
-  { name: 'Git/Gitub', image: '/src/assets/Images/ph.png' },
-  { name: 'MongoDB', image: '/src/assets/Images/pj.png' },
-  { name: 'PhotoShop', image: '/src/assets/Images/pl.jpg' },
-  { name: 'NodeJs', image: '/src/assets/Images/pm.png' },
-  { name: 'Problem Solving', image: '/src/assets/Images/pp.png' },
-  { name: 'Team Work', image: '/src/assets/Images/po.jpg' },
+  { name: 'HTML', image: htmlImage },
+  { name: 'CSS', image: cssImage },
+  { name: 'JavaScript', image: jsImage },
+  { name: 'React', image: reactImage },
+  { name: 'Figma', image: figmaImage },
+  { name: 'ExpressJs', image: expressImage },
+  { name: 'Git/Gitub', image: gitImage },
+  { name: 'MongoDB', image: mongoImage },
+  { name: 'PhotoShop', image: photoshopImage },
+  { name: 'NodeJs', image: nodeImage },
+  { name: 'Problem Solving', image: problemSolvingImage },
+  { name: 'Team Work', image: teamworkImage },
   // add other skills here
 ];
 
