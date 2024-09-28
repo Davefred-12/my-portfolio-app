@@ -3,6 +3,9 @@ import React from 'react';
 import './Hero.css';
 import { Link } from 'react-scroll'; // For smooth scrolling
 
+// Import the image
+import pcImage from '../../assets/images/pc.jpg';
+
 const Hero = () => {
   return (
     <section id="hero" className="hero">
@@ -12,8 +15,7 @@ const Hero = () => {
       <div className="hero-content">
         <div className="hero-text">
           <h1>ADELEYE ADEWALE</h1>
-          <p className="subtitle">WEB DEVELOPER<br></br>
-UI DESIGNER</p>
+          <p className="subtitle">WEB DEVELOPER<br></br>UI DESIGNER</p>
           <div className="hero-buttons">
             <Link to="projects" smooth={true} duration={500}>
               <button className="hero-button">See My Latest Work</button>
@@ -23,7 +25,8 @@ UI DESIGNER</p>
             </Link>
           </div>
         </div>
-        <img src="/src/assets/images/pc.jpg" alt="Pamilerin" className="hero-image" />
+        {/* Use the imported image here */}
+        <img src={pcImage} alt="Pamilerin" className="hero-image" />
       </div>
     </section>
   );
