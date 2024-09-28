@@ -1,5 +1,6 @@
-/* eslint-disable no-unused-vars */
+// eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import './Contact.css';
 
 const Contact = () => {
@@ -15,50 +16,54 @@ const Contact = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });  
+    setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault(); // Prevents the default form submission behavior
-    try {
-        const response = await fetch('/api/contact', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(formData), // Converts form data to JSON
-        });
-
-        const result = await response.json(); // Parses the JSON response
-        if (response.ok) {
-            setSuccess(true); // Set success state if the response is OK
-            setFormData({ name: '', email: '', subject: '', message: '' }); // Clear the form
-        } else {
-            setError(result.message); // Set error state if not OK
-        }
-    } catch (error) {
-        setError('There was an issue submitting the form.'); // Handle any fetch errors
-    }
-};
-
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  
+    // Define the parameters to be sent based on your form input
+    const emailParams = {
+      to_name: "DaleTech Team",  
+      from_name: formData.name,  
+      email: formData.email,    
+      Subject: formData.subject, 
+      message: formData.message  
+    };
+  
+    // EmailJS send function
+    emailjs.send(
+      'service_ayhbt3p',      
+      'template_zi0hxor',     
+      emailParams,        
+      'mtSO1FfX1cSumYMd4'      
+    )
+    .then((response) => {
+      console.log('SUCCESS!', response.status, response.text);
+      setSuccess(true);
+      setError('');
+      setFormData({ name: '', email: '', subject: '', message: '' }); // Clear form
+    }, (err) => {
+      console.log('FAILED...', err);
+      setError('Failed to send message. Please try again.');
+    });
+  };
+  ;
 
   return (
-<div id="contact" className="contact-container">
+    <div id="contact" className="contact-container">
       <div className="contact-info">
-        <h1>Lets work together</h1><br></br><br></br>
-        <p><b>Mail:</b><br></br> adeleyepamilerin9@gmail.com</p><br></br><br></br>
-        <p><b>Address:</b><br></br>2, Road C, Iroko Estate, Igando, Lagos State, Nigeria.</p><br></br><br></br>
-        <p><b>Phone:</b><br></br> +234 816 561 9543</p>
+        <h1>Lets work together</h1><br />
+        <p><b>Mail:</b><br />adeleyepamilerin9@gmail.com</p><br />
+        <p><b>Address:</b><br />2, Road C, Iroko Estate, Igando, Lagos State, Nigeria.</p><br />
+        <p><b>Phone:</b><br />+234 816 561 9543</p>
       </div>
       <div className="phone-form-container" onAnimationEnd={() => setAnimationCompleted(true)}>
         <div className="phone-animation">
-          <i className="phone-icon">📞</i> {/* Replace with an SVG or image if you have one */}
+          <i className="phone-icon">📞</i>
         </div>
         {animationCompleted && (
-         <form onSubmit={handleSubmit} className="contact-form">
-         {}
-      
-     
+          <form onSubmit={handleSubmit} className="contact-form">
             <input
               type="text"
               name="name"
