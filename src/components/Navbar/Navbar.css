@@ -16,7 +16,7 @@
   
   /* Name styling */
   .name {
-    margin-left: 40px; /* Space between name and hamburger */
+    margin-left: 60px; /* Space between name and hamburger */
     font-size: 20px; /* Font size for the name */
     font-weight: bold; /* Bold text */
     margin-top: .5em;

@@ -23,7 +23,7 @@ html {
   align-items: center;
   cursor: pointer;
   position: fixed; /* Allows absolute positioning of spans inside */
-  top: 10px;
+  top: 20px;
   left: 7px;
   z-index: 1;
 }

@@ -1,5 +1,73 @@
+/* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Global Reset and Font Family */
 * {
     font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base Styles for all screen sizes */
+body {
+    background-color: #ffffff;
+    color: #333;
+}
+
+/* Global styles for 1080 x 2408 pixels resolution */
+@media screen and (min-width: 1080px) and (max-width: 2408px) {
+  /* Adjust global font sizes */
+  body {
+    font-size: 18px;
   }
+
+  /* Example adjustments for headers */
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  /* Buttons and Inputs */
+  button {
+    padding: 12px 24px;
+    font-size: 1.2rem;
+  }
+
+  /* Global layout adjustments */
+  .container {
+    width: 100%;
+    padding: 20px;
+    max-width: 1200px; /* Control container width */
+    margin: 0 auto;
+  }
+
+  /* Example media query for responsiveness */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Navbar or header adjustments */
+  .navbar {
+    font-size: 1.5rem;
+    padding: 20px 0;
+  }
+
+  /* Footer adjustments */
+  .footer {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  /* Other global elements you may want to adjust */
+}
+
   
