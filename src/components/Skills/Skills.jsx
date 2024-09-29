@@ -1,35 +1,22 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useEffect, useRef } from 'react';
 import './Skills.css';
-import htmlImage from '@assets/Images/html.png';
-import cssImage from '@assets/Images/css.jpg';
-import jsImage from '@assets/Images/js.png';
-import reactImage from '@assets/Images/react.png';
-import figmaImage from '@assets/Images/pi.png';
-import expressImage from '@assets/Images/express-js.png';
-import gitImage from '@assets/Images/ph.png';
-import mongoImage from '@assets/Images/pj.png';
-import photoshopImage from '@assets/Images/pl.jpg';
-import nodeImage from '@assets/Images/pm.png';
-import problemSolvingImage from '@assets/Images/pp.png';
-import teamworkImage from '@assets/Images/po.jpg';
-
 // Skills data
 const skills = [
-  { name: 'HTML', image: htmlImage },
-  { name: 'CSS', image: cssImage },
-  { name: 'JavaScript', image: jsImage },
-  { name: 'React', image: reactImage },
-  { name: 'Figma', image: figmaImage },
-  { name: 'ExpressJs', image: expressImage },
-  { name: 'Git/Gitub', image: gitImage },
-  { name: 'MongoDB', image: mongoImage },
-  { name: 'PhotoShop', image: photoshopImage },
-  { name: 'NodeJs', image: nodeImage },
-  { name: 'Problem Solving', image: problemSolvingImage },
-  { name: 'Team Work', image: teamworkImage },
-  // add other skills here
+  { name: 'HTML', image: '/images/html.png' },
+  { name: 'CSS', image: '/images/css.jpg' },
+  { name: 'JavaScript', image: '/images/js.png' },
+  { name: 'React', image: '/images/react.png' },
+  { name: 'Figma', image: '/images/pi.png' },
+  { name: 'ExpressJs', image: '/images/express-js.png' },
+  { name: 'Git/Github', image: '/images/ph.png' },
+  { name: 'MongoDB', image: '/images/pj.png' },
+  { name: 'PhotoShop', image: '/images/pl.jpg' },
+  { name: 'NodeJs', image: '/images/pm.png' },
+  { name: 'Problem Solving', image: '/images/pp.png' },
+  { name: 'Team Work', image: '/images/po.jpg' },
 ];
+
 
 const Skills = () => {
   const skillsRef = useRef(null);

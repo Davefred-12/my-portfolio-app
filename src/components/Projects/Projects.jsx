@@ -2,80 +2,61 @@
 import React from "react";
 import { useInView } from "react-intersection-observer";
 import "./Projects.css";
-import dalaImage from '@assets/Images/dala.png';
-import cogImage from '@assets/Images/cog.png';
-import getLinkedImage from '@assets/Images/getLinked.png';
-import alphaImage from '@assets/Images/alpha.png';
-import movieImage from '@assets/Images/movie.png';
-import nccfImage from '@assets/Images/nccf.png';
-import diceImage from '@assets/Images/dice.png';
-import jokesImage from '@assets/Images/jokes.png';
-import todoImage from '@assets/Images/todo.png';
 
-// Project data with imported images
 const projects = [
   {
     name: "Dale Wears Ecommerce Website",
-    description:
-      "An innovative ecommerce platform designed for clothing and accessories, offering a seamless shopping experience. Users can explore a diverse range of products and enjoy a user-friendly interface to enhance their online shopping journey.",
+    description: "An innovative ecommerce platform designed for clothing and accessories.",
     demoLink: "https://dalewears.onrender.com",
-    image: dalaImage, // Use the imported image
+    image: '/images/dala.png', // Direct URL from public folder
   },
   {
-    name: "Foresite Engineering ",
-    description:
-      "A professional platform tailored for the engineering sector, offering solutions for project management and collaboration. This site connects users with essential resources and services to streamline their engineering projects.",
+    name: "Foresite Engineering",
+    description: "A professional platform tailored for the engineering sector.",
     demoLink: "https://qmoilandgas.com",
-    image: cogImage,
+    image: '/images/cog.png',
   },
   {
     name: "GetLinked Technologies",
-    description:
-      "An engaging application focused on task management, providing users with tools to keep track of their tasks effectively. Its simple interface ensures that users can prioritize and manage their responsibilities with ease.",
+    description: "An engaging application focused on task management.",
     demoLink: "",
-    image: getLinkedImage,
+    image: '/images/getLinked.png',
   },
   {
-    name: "Tech Alpha Quiz ",
-    description:
-      "A dynamic and interactive quiz platform designed to challenge and enhance your tech knowledge. With a focus on cutting-edge topics and fun gameplay, it's perfect for tech enthusiasts looking to test their skills and learn something new.",
+    name: "Tech Alpha Quiz",
+    description: "A dynamic and interactive quiz platform.",
     demoLink: "https://quiz-game-app-6qbj.onrender.com",
-    image: alphaImage,
+    image: '/images/alpha.png',
   },
   {
-    name: "Movie Search App ",
-    description:
-      "A platform for movie enthusiasts to search and explore movies. It offers a sleek design and user-friendly interface to find information about films effortlessly.",
+    name: "Movie Search App",
+    description: "A platform for movie enthusiasts to search and explore movies.",
     demoLink: "https://deluxe-panda-13911d.netlify.app",
-    image: movieImage,
+    image: '/images/movie.png',
   },
   {
-    name: "NCCF Etinan ",
-    description:
-      "A platform that connects members of the National Christian Corpers Fellowship (NCCF), providing a central hub for updates, events, and resources.",
+    name: "NCCF Etinan",
+    description: "A platform that connects members of the National Christian Corpers Fellowship.",
     demoLink: "https://nccf-uuvk.onrender.com",
-    image: nccfImage,
+    image: '/images/nccf.png',
   },
   {
     name: "Dice Game",
-    description:
-      "A fun and interactive game where players roll virtual dice to compete. With simple mechanics and engaging visuals, it's the perfect way to enjoy a quick and exciting challenge with friends or on your own.",
+    description: "A fun and interactive game where players roll virtual dice.",
     demoLink: "https://dice-game-app.onrender.com",
-    image: diceImage,
+    image: '/images/dice.png',
   },
   {
     name: "Jokes and Word App",
-    description:
-      "A simple app that allows users to get random jokes at the click of a button. It also includes a word search feature that provides phonetics, meanings, and examples of words.",
+    description: "A simple app that allows users to get random jokes and word definitions.",
     demoLink: "https://joke-app-btkm.onrender.com",
-    image: jokesImage,
+    image: '/images/jokes.png',
   },
   {
     name: "To-Do List App",
-    description:
-      "A straightforward application that helps users efficiently manage tasks and to-dos. With a clean design and intuitive functionality, this app enables users to stay organized and prioritize their daily activities effortlessly.",
+    description: "A straightforward application that helps users efficiently manage tasks.",
     demoLink: "https://todo-list-app-i5ik.onrender.com",
-    image: todoImage,
+    image: '/images/todo.png',
   },
 ];
 

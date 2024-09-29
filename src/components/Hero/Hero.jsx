@@ -2,8 +2,6 @@
 import React from 'react';
 import './Hero.css';
 import { Link } from 'react-scroll';
-import pcImage from '@assets/images/pc.jpg'; // Using the alias
-
 const Hero = () => {
   return (
     <section id="hero" className="hero">
@@ -23,7 +21,7 @@ const Hero = () => {
             </Link>
           </div>
         </div>
-        <img src={pcImage} alt="Pamilerin" className="hero-image" />
+        <img src="/images/pc.jpg" alt="Pamilerin" className="hero-image" />
       </div>
     </section>
   );
