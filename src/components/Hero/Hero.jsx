@@ -1,11 +1,8 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
 import './Hero.css';
-import { Link } from 'react-scroll'; // For smooth scrolling
-
-import pcImage from '@assets/images/pc.jpg';
-
-
+import { Link } from 'react-scroll';
+import pcImage from '@assets/images/pc.jpg'; // Using the alias
 
 const Hero = () => {
   return (
@@ -16,7 +13,7 @@ const Hero = () => {
       <div className="hero-content">
         <div className="hero-text">
           <h1>ADELEYE ADEWALE</h1>
-          <p className="subtitle">WEB DEVELOPER<br></br>UI DESIGNER</p>
+          <p className="subtitle">WEB DEVELOPER<br />UI DESIGNER</p>
           <div className="hero-buttons">
             <Link to="projects" smooth={true} duration={500}>
               <button className="hero-button">See My Latest Work</button>
@@ -26,7 +23,6 @@ const Hero = () => {
             </Link>
           </div>
         </div>
-        {/* Use the imported image here */}
         <img src={pcImage} alt="Pamilerin" className="hero-image" />
       </div>
     </section>

@@ -1,19 +1,20 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useEffect, useRef } from 'react';
 import './Skills.css';
-import htmlImage from '/src/assets/Images/html.png';
-import cssImage from '/src/assets/Images/css.jpg';
-import jsImage from '/src/assets/Images/js.png';
-import reactImage from '/src/assets/Images/react.png';
-import figmaImage from '/src/assets/Images/pi.png';
-import expressImage from '/src/assets/Images/express-js.png';
-import gitImage from '/src/assets/Images/ph.png';
-import mongoImage from '/src/assets/Images/pj.png';
-import photoshopImage from '/src/assets/Images/pl.jpg';
-import nodeImage from '/src/assets/Images/pm.png';
-import problemSolvingImage from '/src/assets/Images/pp.png';
-import teamworkImage from '/src/assets/Images/po.jpg';
+import htmlImage from '@assets/Images/html.png';
+import cssImage from '@assets/Images/css.jpg';
+import jsImage from '@assets/Images/js.png';
+import reactImage from '@assets/Images/react.png';
+import figmaImage from '@assets/Images/pi.png';
+import expressImage from '@assets/Images/express-js.png';
+import gitImage from '@assets/Images/ph.png';
+import mongoImage from '@assets/Images/pj.png';
+import photoshopImage from '@assets/Images/pl.jpg';
+import nodeImage from '@assets/Images/pm.png';
+import problemSolvingImage from '@assets/Images/pp.png';
+import teamworkImage from '@assets/Images/po.jpg';
 
+// Skills data
 const skills = [
   { name: 'HTML', image: htmlImage },
   { name: 'CSS', image: cssImage },

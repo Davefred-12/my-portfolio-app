@@ -2,16 +2,15 @@
 import React from "react";
 import { useInView } from "react-intersection-observer";
 import "./Projects.css";
-// Importing images from the correct paths
-import dalaImage from "../../assets/Images/dala.png";
-import cogImage from "../../assets/Images/cog.png";
-import getLinkedImage from "../../assets/Images/getLinked.png";
-import alphaImage from "../../assets/Images/alpha.png";
-import movieImage from "../../assets/Images/movie.png";
-import nccfImage from "../../assets/Images/nccf.png";
-import diceImage from "../../assets/Images/dice.png";
-import jokesImage from "../../assets/Images/jokes.png";
-import todoImage from "../../assets/Images/todo.png";
+import dalaImage from '@assets/Images/dala.png';
+import cogImage from '@assets/Images/cog.png';
+import getLinkedImage from '@assets/Images/getLinked.png';
+import alphaImage from '@assets/Images/alpha.png';
+import movieImage from '@assets/Images/movie.png';
+import nccfImage from '@assets/Images/nccf.png';
+import diceImage from '@assets/Images/dice.png';
+import jokesImage from '@assets/Images/jokes.png';
+import todoImage from '@assets/Images/todo.png';
 
 // Project data with imported images
 const projects = [
