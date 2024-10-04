@@ -9,7 +9,7 @@ const Services = () => {
 
   useEffect(() => {
     const observerOptions = {
-      root: null, // Use the viewport as the container
+      root: null, 
       threshold: 0.1, // Trigger when 10% of the element is in view
     };
 
@@ -68,22 +68,22 @@ const Services = () => {
         <div className="service-list">
           <div className="service-item">
             <h3>Frontend Development</h3>
-            <br></br> <br></br>
+            <br></br> 
             <p>Creating responsive, user-friendly interfaces that enhance user experience. I utilize modern technologies like React, HTML, and CSS to build visually appealing and intuitive designs that work seamlessly across devices.</p>
           </div>
           <div className="service-item">
             <h3>Backend Development</h3>
-            <br></br> <br></br> <br></br>
+            <br></br> 
             <p>Building robust and scalable server-side applications using Node.js and Express. I focus on creating efficient APIs and handling data management, ensuring your application runs smoothly and securely.</p>
           </div>
           <div className="service-item">
             <h3>API Integration</h3>
-            <br></br> <br></br> <br></br> 
+            <br></br>  
             <p>Enhancing your web applications by integrating third-party services and APIs. This service streamlines functionality and allows for seamless communication between different platforms, expanding your app’s capabilities.</p>
           </div>
           <div className="service-item">
             <h3>Fullstack Development</h3>
-            <br></br> <br></br>
+            <br></br> 
             <p>Bringing together frontend and backend expertise to deliver comprehensive web solutions. I manage the entire development process, ensuring that all components work harmoniously to create a cohesive and functional application.</p>
           </div>
         </div>

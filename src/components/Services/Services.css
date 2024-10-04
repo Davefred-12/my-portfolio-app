@@ -64,7 +64,7 @@
     width: 300px;
     height: 50vh;
     margin: 20px;
-    padding: 30px;
+    padding: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   
@@ -123,4 +123,35 @@
     background-color: #680066;
     color: white;
   }
+  /* Media query for iPhone SE screen (375px width) */
+@media only screen and (max-width: 375px) {
+  .services {
+    padding: 20px; /* Reduced padding */
+  }
+
+  .services h2 {
+    font-size: 2.5rem; /* Further reduced font size */
+  }
+
+  .service-item {
+    width: 100%; /* Full width on iPhone SE */
+    margin: 10px 0; /* Reduced margin */
+  }
+
+  .service-item h3 {
+    font-size: 1.1rem; /* Slightly smaller font */
+  }
+
+  .service-item p {
+    font-size: 0.8rem; /* Adjusted font size */
+  }
+
+  .service-intro h2 {
+    font-size: 1.4rem; /* Smaller intro header */
+  }
+
+  .explore-btn {
+    padding: 6px 12px; /* Smaller button */
+  }
+}
   
