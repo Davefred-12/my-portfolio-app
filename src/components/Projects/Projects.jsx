@@ -9,7 +9,7 @@ const projects = [
     description:
       "Bellefull Foods is a cutting-edge eCommerce platform that focuses on providing an exceptional food delivery experience. Offering a variety of local and international cuisines, it enables customers to easily browse, order, and track their meals. The platform ensures a seamless user experience with its user-friendly interface and secure payment options.",
     demoLink: "https://food-delivery-app-client-fl4g.onrender.com",
-    image: "/images/bellefull.png", 
+    image: "/images/bellefull.png",
   },
   {
     name: "React Youtube Clone",
@@ -24,6 +24,13 @@ const projects = [
       "Dale Wears is a modern and innovative eCommerce platform dedicated to providing customers with a wide range of clothing and accessories. The website features an easy-to-navigate interface, allowing users to browse through various categories of products. It offers secure payment methods, personalized recommendations, and a smooth checkout process to ensure a seamless shopping experience.",
     demoLink: "https://dalewears.onrender.com",
     image: "/images/dala.png", // Direct URL from public folder
+  },
+  {
+    name: "Netflix Clone",
+    description:
+      "Movie Search App is a platform designed for movie lovers to explore and discover movies based on different genres, ratings, and release dates. With an easy-to-use search function, users can look up their favorite films, check detailed information, watch trailers, and read reviews from other users. Movie Search App aims to be the go-to platform for film enthusiasts looking to explore their next watch.",
+    demoLink: "https://deluxe-panda-13911d.netlify.app",
+    image: "/images/netflix.png",
   },
   {
     name: "Foresite Engineering",
@@ -45,13 +52,6 @@ const projects = [
       "Tech Alpha Quiz is an interactive and engaging quiz platform designed to challenge users' knowledge in various tech-related fields. The platform features a variety of quizzes covering topics like programming, web development, data science, and more. Each quiz is designed to test users’ skills, while providing immediate feedback and explanations for each question. Tech Alpha Quiz aims to make learning about technology fun and competitive, helping users improve their knowledge while enjoying the experience.",
     demoLink: "https://quiz-game-app-6qbj.onrender.com",
     image: "/images/alpha.png",
-  },
-  {
-    name: "Netflix Clone",
-    description:
-      "Movie Search App is a platform designed for movie lovers to explore and discover movies based on different genres, ratings, and release dates. With an easy-to-use search function, users can look up their favorite films, check detailed information, watch trailers, and read reviews from other users. Movie Search App aims to be the go-to platform for film enthusiasts looking to explore their next watch.",
-    demoLink: "https://deluxe-panda-13911d.netlify.app",
-    image: "/images/netflix.png",
   },
   {
     name: "NCCF Etinan",
@@ -81,8 +81,6 @@ const projects = [
     demoLink: "https://todo-list-app-i5ik.onrender.com",
     image: "/images/todo.png",
   },
-  
-  
 ];
 
 const Projects = () => {
