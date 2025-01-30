@@ -29,7 +29,7 @@ const projects = [
     name: "Netflix Clone",
     description:
       "Movie Search App is a platform designed for movie lovers to explore and discover movies based on different genres, ratings, and release dates. With an easy-to-use search function, users can look up their favorite films, check detailed information, watch trailers, and read reviews from other users. Movie Search App aims to be the go-to platform for film enthusiasts looking to explore their next watch.",
-    demoLink: "https://deluxe-panda-13911d.netlify.app",
+    demoLink: "https://movie-app-63xc.onrender.com",
     image: "/images/netflix.png",
   },
   {
