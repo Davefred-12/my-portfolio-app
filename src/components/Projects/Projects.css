@@ -50,6 +50,7 @@
   
   .project-description {
     font-size: 15px; 
+    line-height: 1.4;
     font-family: 'Poppins', sans-serif;
     margin-bottom: 20px; 
   }
