@@ -36,7 +36,7 @@ const projects = [
     name: "Foresite Engineering",
     description:
       "Foresite Engineering is a comprehensive platform tailored for professionals in the engineering sector. The platform provides a space for networking and sharing technical knowledge. Features include project management tools, resource libraries, and a client dashboard for real-time updates on ongoing projects. Foresite Engineering aims to streamline operations, improve communication, and drive efficiency in the engineering industry.",
-    demoLink: "https://qmoilandgas.com",
+    demoLink: "",
     image: "/images/cog.png",
   },
   {
