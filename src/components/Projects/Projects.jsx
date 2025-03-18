@@ -43,7 +43,7 @@ const projects = [
     name: "GetLinked Technologies",
     description:
       "GetLinked Technologies is a task management application designed to help individuals and teams stay organized and productive. It offers a sleek, intuitive interface that allows users to create tasks, set deadlines, and prioritize their work. Whether you're working alone or with a team, GetLinked Technologies provides the tools needed to manage work and tasks efficiently.",
-    demoLink: "",
+    demoLink: "https://quiz-game-app-6qbj.onrender.com",
     image: "/images/getLinked.png",
   },
   {
