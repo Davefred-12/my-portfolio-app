@@ -19,6 +19,13 @@ const projects = [
     image: "/images/youtube.png",
   },
   {
+    name: "TechAlpha Newsletter",
+    description:
+      "A dynamic web application that delivers curated tech insights and trending content, designed to keep tech enthusiasts informed and engaged. The platform offers a sleek, user-friendly interface for exploring the latest technological developments, industry news, and innovative breakthroughs.",
+    demoLink: "https://techalpha-newsletter-front.onrender.com",
+    image: "/images/news.png",
+  },
+  {
     name: "Dale Wears Ecommerce Website",
     description:
       "Dale Wears is a modern and innovative eCommerce platform dedicated to providing customers with a wide range of clothing and accessories. The website features an easy-to-navigate interface, allowing users to browse through various categories of products. It offers secure payment methods, personalized recommendations, and a smooth checkout process to ensure a seamless shopping experience.",
