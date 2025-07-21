@@ -33,7 +33,7 @@ const Contact = () => {
   
     // EmailJS send function
     emailjs.send(
-      'service_ayhbt3p',      
+      'service_cwxxde4',      
       'template_zi0hxor',     
       emailParams,        
       'mtSO1FfX1cSumYMd4'      
