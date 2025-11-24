@@ -12,7 +12,7 @@ const Companies = () => {
     { name: "Debcas Healthcare", logo: "/images/logo4.jpg" },
     { name: "Uncle Ajala", logo: "/images/Uncles.png" },
     { name: "Bellefull Foods", logo: "/images/logo.png" },
-    { name: "Dale Wears", logo: "/images/logo5.jpg" },
+    { name: "Dale Wears", logo: "/images/Dale.jpg" },
   ];
 
   // Duplicate the array for seamless infinite scroll
