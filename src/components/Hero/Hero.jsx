@@ -61,8 +61,8 @@ const Hero = () => {
               ))}
             </div>
           </div>
-
-          <p className="hero-description">
+<h1 className="hero-name">Software Developer</h1>  
+        <p className="hero-description">
             Crafting elegant digital experiences through clean code and innovative design. 
             Specialized in building responsive web applications that blend functionality with aesthetics.
           </p>
