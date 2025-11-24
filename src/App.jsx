@@ -4,6 +4,7 @@ import { ThemeProvider } from './context/ThemeContext';
 import NavBar from './components/Navbar/Navbar';
 import Hero from './components/Hero/Hero';
 import Services from './components/Services/Services';
+
 import Skills from './components/Skills/Skills';
 import Projects from './components/Projects/Projects';
 import Companies from './components/Companies/Companies'; // NEW
