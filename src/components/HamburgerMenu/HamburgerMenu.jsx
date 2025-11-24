@@ -1,4 +1,4 @@
-// eslint-disable-next-line no-unused-vars
+/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
 import './HamburgerMenu.css';
 
@@ -18,13 +18,13 @@ const HamburgerMenu = () => {
     };
   }, [open]);
 
-  const scrollToSection = (e) => {
+  const scrollToSection = (e, targetId) => {
     e.preventDefault();
-    const target = e.target.getAttribute("href");
-    const section = document.querySelector(target);
+    const section = document.querySelector(targetId);
     
     if (section) {
       setOpen(false);
+      // Close menu first, then scroll
       setTimeout(() => {
         section.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }, 300);
@@ -56,23 +56,23 @@ const HamburgerMenu = () => {
         </button>
         
         <div className="menu-content">
-          <a href="#hero" onClick={scrollToSection} className="menu-link">
+          <a href="#hero" onClick={(e) => scrollToSection(e, '#hero')} className="menu-link">
             <span className="menu-number">01</span>
             <span className="menu-text">Home</span>
           </a>
-          <a href="#services" onClick={scrollToSection} className="menu-link">
+          <a href="#services" onClick={(e) => scrollToSection(e, '#services')} className="menu-link">
             <span className="menu-number">02</span>
             <span className="menu-text">Services</span>
           </a>
-          <a href="#skills" onClick={scrollToSection} className="menu-link">
+          <a href="#skills" onClick={(e) => scrollToSection(e, '#skills')} className="menu-link">
             <span className="menu-number">03</span>
             <span className="menu-text">Skills</span>
           </a>
-          <a href="#projects" onClick={scrollToSection} className="menu-link">
+          <a href="#projects" onClick={(e) => scrollToSection(e, '#projects')} className="menu-link">
             <span className="menu-number">04</span>
             <span className="menu-text">Projects</span>
           </a>
-          <a href="#contact" onClick={scrollToSection} className="menu-link">
+          <a href="#contact" onClick={(e) => scrollToSection(e, '#contact')} className="menu-link">
             <span className="menu-number">05</span>
             <span className="menu-text">Contact</span>
           </a>
