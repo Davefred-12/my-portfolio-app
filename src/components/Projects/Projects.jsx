@@ -1,88 +1,94 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React, { useState } from "react";
 import { useInView } from "react-intersection-observer";
 import "./Projects.css";
+import { FaExternalLinkAlt, FaCode, FaArrowRight } from "react-icons/fa";
 
 const projects = [
-   {
+  {
     name: "Mo Apartments",
     description:
-      "Bellefull Foods is a cutting-edge eCommerce platform that focuses on providing an exceptional food delivery experience. Offering a variety of local and international cuisines, it enables customers to easily browse, order, and track their meals. The platform ensures a seamless user experience with its user-friendly interface and secure payment options.",
+      "A sophisticated property management platform streamlining apartment rentals and bookings. Features real-time availability tracking, virtual tours, secure payment processing, and tenant management systems. Built with modern web technologies to deliver seamless user experiences for both property managers and renters.",
+    tech: ["React", "Node.js", "MongoDB"],
     demoLink: "https://moapartment.com",
     image: "/images/mos.png",
   },
-   {
+  {
     name: "Opajr Books",
     description:
-      "Bellefull Foods is a cutting-edge eCommerce platform that focuses on providing an exceptional food delivery experience. Offering a variety of local and international cuisines, it enables customers to easily browse, order, and track their meals. The platform ensures a seamless user experience with its user-friendly interface and secure payment options.",
+      "An innovative digital bookstore revolutionizing how readers discover and purchase books online. Offers personalized recommendations, advanced search filters, author profiles, and seamless checkout. The platform combines elegant design with powerful functionality to create an immersive reading community experience.",
+    tech: ["React", "Express", "Stripe API"],
     demoLink: "https://opajr.com",
     image: "/images/opa.png",
   },
-  
-   {
+  {
     name: "Debcas Healthcare",
     description:
-      "Bellefull Foods is a cutting-edge eCommerce platform that focuses on providing an exceptional food delivery experience. Offering a variety of local and international cuisines, it enables customers to easily browse, order, and track their meals. The platform ensures a seamless user experience with its user-friendly interface and secure payment options.",
+      "A comprehensive healthcare management system connecting patients with quality medical services. Features appointment scheduling, telemedicine capabilities, electronic health records, and prescription management. Designed with accessibility and patient privacy at its core to improve healthcare delivery.",
+    tech: ["React", "Node.js", "PostgreSQL"],
     demoLink: "https://debcashealthcare.co.uk",
     image: "/images/deb.png",
   },
-   {
+  {
     name: "Uncle Ajala",
     description:
-      "Bellefull Foods is a cutting-edge eCommerce platform that focuses on providing an exceptional food delivery experience. Offering a variety of local and international cuisines, it enables customers to easily browse, order, and track their meals. The platform ensures a seamless user experience with its user-friendly interface and secure payment options.",
-    demoLink: "https://https://uncleajala.onrender.com/",
+      "A vibrant travel and lifestyle platform showcasing cultural experiences and adventures. Combines stunning visual storytelling with practical travel guides, booking integrations, and community features. Built to inspire wanderlust while providing valuable resources for modern travelers.",
+    tech: ["React", "MongoDB", "Express"],
+    demoLink: "https://uncleajala.onrender.com/",
     image: "/images/uncle.png",
   },
   {
     name: "Bellefull Foods",
     description:
-      "Bellefull Foods is a cutting-edge eCommerce platform that focuses on providing an exceptional food delivery experience. Offering a variety of local and international cuisines, it enables customers to easily browse, order, and track their meals. The platform ensures a seamless user experience with its user-friendly interface and secure payment options.",
+      "A next-generation food delivery platform transforming the dining experience. Features real-time order tracking, AI-powered meal recommendations, multi-restaurant browsing, and secure payment integration. Optimized for speed and reliability to ensure hot, fresh meals arrive exactly when expected.",
+    tech: ["React", "Node.js", "Socket.io"],
     demoLink: "https://food-delivery-app-client-fl4g.onrender.com",
     image: "/images/bellefull.png",
   },
   {
-    name: "React Youtube Clone",
+    name: "React YouTube Clone",
     description:
-      "React YouTube Clone is a platform designed for movie enthusiasts to search, explore, and watch a variety of videos and movies. Built using React, this clone provides an intuitive interface for browsing video content by category, viewing video details, and watching trailers, all powered by YouTube's API for a real-time video experience.",
+      "A pixel-perfect recreation of YouTube's interface showcasing advanced React skills. Implements video search via YouTube API, responsive video player, category filtering, and trending content discovery. Demonstrates mastery of component architecture, state management, and API integration.",
+    tech: ["React", "YouTube API", "Material-UI"],
     demoLink: "https://youtube-clone-u9xn.onrender.com",
     image: "/images/youtube.png",
   },
   {
     name: "TechAlpha Newsletter",
     description:
-      "A dynamic web application that delivers curated tech insights and trending content, designed to keep tech enthusiasts informed and engaged. The platform offers a sleek, user-friendly interface for exploring the latest technological developments, industry news, and innovative breakthroughs.",
+      "A dynamic tech news aggregator delivering curated insights from across the industry. Features personalized content feeds, bookmark functionality, newsletter subscriptions, and social sharing. Keeps tech professionals informed with the latest innovations, trends, and breakthrough discoveries.",
+    tech: ["React", "Node.js", "News API"],
     demoLink: "https://techalpha-newsletter-front.onrender.com",
     image: "/images/news.png",
   },
   {
-    name: "Dale Wears Ecommerce Website",
+    name: "Dale Wears Ecommerce",
     description:
-      "Dale Wears is a modern and innovative eCommerce platform dedicated to providing customers with a wide range of clothing and accessories. The website features an easy-to-navigate interface, allowing users to browse through various categories of products. It offers secure payment methods, personalized recommendations, and a smooth checkout process to ensure a seamless shopping experience.",
+      "A sleek fashion eCommerce platform delivering premium shopping experiences. Features advanced product filtering, size recommendations, wishlist functionality, and secure checkout with multiple payment options. Built with performance optimization to handle high-traffic seasonal sales effortlessly.",
+    tech: ["React", "Express", "Stripe"],
     demoLink: "https://dalewears.onrender.com",
     image: "/images/dala.png",
   },
-
-
   {
     name: "Tech Alpha Quiz",
     description:
-      "Tech Alpha Quiz is an interactive and engaging quiz platform designed to challenge users' knowledge in various tech-related fields. The platform features a variety of quizzes covering topics like programming, web development, data science, and more. Each quiz is designed to test users’ skills, while providing immediate feedback and explanations for each question. Tech Alpha Quiz aims to make learning about technology fun and competitive, helping users improve their knowledge while enjoying the experience.",
+      "An engaging gamified learning platform testing tech knowledge across multiple domains. Features timed challenges, leaderboards, progress tracking, and detailed explanations for each answer. Makes learning programming, web development, and computer science concepts fun and competitive.",
+    tech: ["React", "Firebase", "Chart.js"],
     demoLink: "https://quiz-game-app-6qbj.onrender.com",
     image: "/images/alpha.png",
   },
- 
- 
   {
-    name: "Jokes and Word App",
+    name: "Jokes & Words App",
     description:
-      "Jokes and Word App is a simple yet entertaining platform that provides users with random jokes and word definitions. Users can refresh the app to receive new jokes, making it a great source of humor during breaks or when in need of a good laugh. Additionally, the app integrates a dictionary feature, allowing users to look up word definitions and expand their vocabulary. Jokes and Word App is perfect for anyone looking to lighten their day with humor or expand their lexicon.",
+      "A delightful entertainment and learning app combining humor with vocabulary expansion. Fetches random jokes from multiple APIs while providing instant dictionary definitions. Perfect for quick breaks, language learners, and anyone seeking daily doses of laughter and knowledge.",
+    tech: ["React", "Jokes API", "Dictionary API"],
     demoLink: "https://joke-app-btkm.onrender.com",
     image: "/images/jokes.png",
   },
- 
 ];
 
 const Projects = () => {
+  const [activeFilter, setActiveFilter] = useState("all");
   const { ref: headingRef, inView: headingInView } = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -90,47 +96,101 @@ const Projects = () => {
 
   return (
     <section id="projects" className="projects">
-      {/* Add the 'animate' class when the heading is in view */}
-      <h2
-        ref={headingRef}
-        className={`projects-heading ${headingInView ? "animate" : ""}`}
-      >
-        What I have Done
-      </h2>
-      <div className="projects-grid">
-        {projects.map((project) => {
-          // eslint-disable-next-line react-hooks/rules-of-hooks
-          const { ref, inView } = useInView({
-            triggerOnce: true,
-            threshold: 0.1,
-          });
+      <div className="projects-container">
+        {/* Header */}
+        <div className="projects-header">
+          <span className="projects-tag">Portfolio</span>
+          <h2
+            ref={headingRef}
+            className={`projects-title ${headingInView ? "animate" : ""}`}
+          >
+            Featured Projects
+          </h2>
+          <p className="projects-subtitle">
+            A showcase of real-world applications I've crafted—each solving unique challenges with elegant code and thoughtful design
+          </p>
+        </div>
 
-          return (
-            <div
-              ref={ref}
-              key={project.name}
-              className={`project-item ${inView ? "animate" : ""}`}
-            >
-              <img
-                src={project.image}
-                alt={project.name}
-                className="project-image"
-              />
-              <div className="project-info">
-                <h3 className="project-title">{project.name}</h3>
-                <p className="project-description">{project.description}</p>
-                <a
-                  href={project.demoLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="demo-button"
-                >
-                  See Demo
-                </a>
+        {/* Projects Grid */}
+        <div className="projects-grid">
+          {projects.map((project, index) => {
+            const { ref, inView } = useInView({
+              triggerOnce: true,
+              threshold: 0.1,
+            });
+
+            const isEven = index % 2 === 0;
+
+            return (
+              <div
+                ref={ref}
+                key={project.name}
+                className={`project-card ${inView ? "visible" : ""} ${
+                  isEven ? "even" : "odd"
+                }`}
+              >
+                <div className="project-image-wrapper">
+                  <img
+                    src={project.image}
+                    alt={project.name}
+                    className="project-image"
+                  />
+                  <div className="project-overlay">
+                    <a
+                      href={project.demoLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="overlay-button"
+                    >
+                      <FaExternalLinkAlt />
+                      <span>View Live Site</span>
+                    </a>
+                  </div>
+                </div>
+
+                <div className="project-content">
+                  <div className="project-number">0{index + 1}</div>
+                  <h3 className="project-name">{project.name}</h3>
+                  <p className="project-description">{project.description}</p>
+                  
+                  <div className="project-tech">
+                    {project.tech.map((tech) => (
+                      <span key={tech} className="tech-tag">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+
+                  <a
+                    href={project.demoLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-link"
+                  >
+                    <span>View Project</span>
+                    <FaArrowRight className="link-arrow" />
+                  </a>
+                </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
+
+        {/* CTA Section */}
+        <div className="projects-cta">
+          <FaCode className="cta-icon" />
+          <h3>Want to See More?</h3>
+          <p>Check out my GitHub for additional projects and open-source contributions</p>
+          <a
+            href="https://github.com/Davefred-12"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="github-button"
+          >
+            Visit GitHub Profile
+            <FaExternalLinkAlt className="github-icon" />
+          </a>
+        </div>
       </div>
     </section>
   );

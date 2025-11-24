@@ -1,0 +1,261 @@
+/* Companies Section */
+.companies {
+  padding: 100px 40px;
+  background: var(--bg-secondary);
+  position: relative;
+  overflow: hidden;
+}
+
+.companies::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border), transparent);
+}
+
+.companies-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Header */
+.companies-header {
+  text-align: center;
+  margin-bottom: 60px;
+  animation: fadeIn 0.8s ease-out;
+}
+
+.companies-tag {
+  display: inline-block;
+  padding: 8px 20px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  border-radius: 50px;
+  color: var(--accent);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.companies-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 15px;
+  background: linear-gradient(135deg, var(--text-primary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.companies-subtitle {
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* Scroll Wrapper */
+.companies-scroll-wrapper {
+  position: relative;
+  overflow: hidden;
+  padding: 60px 0;
+}
+
+/* Gradient Overlays */
+.companies-scroll-wrapper::before,
+.companies-scroll-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 200px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.companies-scroll-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, var(--bg-secondary), transparent);
+}
+
+.companies-scroll-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, var(--bg-secondary), transparent);
+}
+
+/* Scrolling Container */
+.companies-scroll {
+  display: flex;
+  gap: 100px;
+  animation: scroll 35s linear infinite;
+  width: fit-content;
+}
+
+.companies-scroll:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Company Card - NO BACKGROUND, JUST LOGO */
+.company-card {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 320px;
+  height: 180px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  transition: all 0.4s ease;
+}
+
+.company-card:hover {
+  transform: translateY(-15px) scale(1.1);
+}
+
+.company-logo {
+  max-width: 120%;
+  max-height: 120%;
+  object-fit: contain;
+  /* Logos are COLORFUL - no filters */
+  filter: none;
+  opacity: 1;
+  transition: all 0.4s ease;
+}
+
+.company-card:hover .company-logo {
+  transform: scale(1.05);
+  filter: drop-shadow(0 8px 20px rgba(168, 85, 247, 0.4));
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .companies {
+    padding: 80px 30px;
+  }
+
+  .companies-header {
+    margin-bottom: 50px;
+  }
+
+  .companies-scroll {
+    gap: 90px;
+  }
+
+  .company-card {
+    width: 280px;
+    height: 160px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .companies {
+    padding: 60px 20px;
+  }
+
+  .companies-header {
+    margin-bottom: 40px;
+  }
+
+  .companies-tag {
+    font-size: 0.85rem;
+    padding: 6px 16px;
+  }
+
+  .companies-title {
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+  }
+
+  .companies-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .companies-scroll-wrapper {
+    padding: 50px 0;
+  }
+
+  .companies-scroll-wrapper::before,
+  .companies-scroll-wrapper::after {
+    width: 100px;
+  }
+
+  .companies-scroll {
+    gap: 80px;
+    animation-duration: 30s;
+  }
+
+  .company-card {
+    width: 250px;
+    height: 140px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .companies {
+    padding: 50px 15px;
+  }
+
+  .companies-header {
+    margin-bottom: 35px;
+  }
+
+  .companies-tag {
+    font-size: 0.8rem;
+    padding: 6px 14px;
+  }
+
+  .companies-title {
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+  }
+
+  .companies-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .companies-scroll-wrapper {
+    padding: 40px 0;
+  }
+
+  .companies-scroll-wrapper::before,
+  .companies-scroll-wrapper::after {
+    width: 50px;
+  }
+
+  .companies-scroll {
+    gap: 70px;
+    animation-duration: 25s;
+  }
+
+  .company-card {
+    width: 220px;
+    height: 130px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
