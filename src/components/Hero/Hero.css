@@ -84,7 +84,7 @@
 .hero-content {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
-  gap: 80px;
+  gap: 8px;
   max-width: 1400px;
   width: 100%;
   align-items: center;
