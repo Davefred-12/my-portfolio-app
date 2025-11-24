@@ -1,0 +1,133 @@
+.welcome-notification {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 10px 40px var(--shadow-lg);
+  padding: 20px;
+  min-width: 320px;
+  max-width: 400px;
+  z-index: 10000;
+  transform: translateX(500px);
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  overflow: hidden;
+}
+
+.welcome-notification.visible {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.welcome-notification.closing {
+  transform: translateX(500px);
+  opacity: 0;
+}
+
+.notification-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  position: relative;
+}
+
+.notification-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+  animation: bounce 1s ease-in-out 0.5s;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.notification-text {
+  flex: 1;
+}
+
+.notification-text h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: var(--text-primary);
+}
+
+.notification-text p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.notification-close {
+  background: transparent;
+  border: none;
+  font-size: 1.8rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.notification-close:hover {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  transform: rotate(90deg);
+}
+
+.notification-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-hover));
+  width: 100%;
+  animation: progressBar 5s linear forwards;
+  border-radius: 0 0 12px 12px;
+}
+
+@keyframes progressBar {
+  from { width: 100%; }
+  to { width: 0%; }
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+  .welcome-notification {
+    bottom: 20px;
+    right: 20px;
+    left: 20px;
+    min-width: auto;
+    max-width: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .welcome-notification {
+    bottom: 15px;
+    right: 15px;
+    left: 15px;
+    padding: 15px;
+  }
+
+  .notification-icon {
+    font-size: 1.5rem;
+  }
+
+  .notification-text h4 {
+    font-size: 1rem;
+  }
+
+  .notification-text p {
+    font-size: 0.85rem;
+  }
+}

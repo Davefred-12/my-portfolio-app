@@ -1,40 +1,213 @@
-/* Navbar styles */
+/* Navbar */
 .navbar {
-    background-color: white; /* Navbar background color */
-    color: black; /* Text color */
-    padding: 10px 20px; /* Padding around the navbar */
-    display: flex; /* Flex layout */
-    justify-content: space-between; /* Space between items */
-    align-items: center; /* Center items vertically */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--navbar-bg);
+  backdrop-filter: blur(10px);
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.navbar.scrolled {
+  background-color: var(--navbar-bg);
+  box-shadow: 0 2px 20px var(--shadow);
+  border-bottom-color: var(--border);
+  padding: 12px 40px;
+}
+
+/* Navbar Left */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+  cursor: default;
+  user-select: none;
+}
+
+.name-accent {
+  color: var(--accent);
+  font-weight: 800;
+}
+
+.name:hover {
+  transform: scale(1.02);
+}
+
+/* Navbar Right */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.social-link::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--accent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.social-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px var(--shadow);
+  color: white;
+}
+
+.social-link:hover::before {
+  opacity: 1;
+}
+
+.social-link:nth-child(1):hover { --accent: #333; }
+.social-link:nth-child(2):hover { --accent: #d44638; }
+.social-link:nth-child(3):hover { --accent: #0077b5; }
+.social-link:nth-child(4):hover { --accent: #25d366; }
+
+/* Theme Toggle Button */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: var(--bg-secondary);
+  border: 2px solid var(--border);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.theme-toggle:hover {
+  transform: rotate(15deg) scale(1.05);
+  border-color: var(--accent);
+  box-shadow: 0 5px 15px var(--shadow);
+}
+
+.theme-toggle-icon {
+  font-size: 1.2rem;
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover .theme-toggle-icon {
+  transform: scale(1.1);
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 12px 20px;
   }
-  
-  /* Navbar left section */
-  .navbar-left {
-    display: flex;
-    align-items: center; /* Center items vertically */
+
+  .navbar.scrolled {
+    padding: 10px 20px;
   }
-  
-  /* Name styling */
+
   .name {
-    margin-left: 60px; /* Space between name and hamburger */
-    font-size: 20px; /* Font size for the name */
-    font-weight: bold; /* Bold text */
-    margin-top: .5em;
-    margin-bottom: 1em;
+    font-size: 1.25rem;
   }
-  
-  /* Social icons styles */
+
+  .navbar-right {
+    gap: 15px;
+  }
+
   .social-icons {
-    display: flex; /* Flex layout for icons */
-    align-items: center; /* Center icons vertically */
+    gap: 10px;
   }
-  
-  .social-icons a {
-    margin-left: 15px; /* Space between icons */
-    font-size: 20px; /* Icon size */
-    transition: color 0.3s ease; /* Transition effect for hover */
+
+  .social-link {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
   }
-  
- 
- 
-  
+
+  .theme-toggle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .theme-toggle-icon {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar {
+    padding: 10px 15px;
+  }
+
+  .navbar.scrolled {
+    padding: 8px 15px;
+  }
+
+  .name {
+    font-size: 1.1rem;
+  }
+
+  .navbar-right {
+    gap: 12px;
+  }
+
+  .social-icons {
+    gap: 8px;
+  }
+
+  .social-link {
+    width: 32px;
+    height: 32px;
+    font-size: 0.9rem;
+  }
+
+  .theme-toggle {
+    width: 36px;
+    height: 36px;
+  }
+
+  .theme-toggle-icon {
+    font-size: 1rem;
+  }
+}

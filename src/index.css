@@ -1,73 +1,207 @@
 /* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
-/* Global Reset and Font Family */
+/* CSS Variables for Theme */
+:root[data-theme="light"] {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --bg-tertiary: #e9ecef;
+  --text-primary: #1a1a1a;
+  --text-secondary: #6c757d;
+  --accent: #680066;
+  --accent-hover: #8a0088;
+  --border: #dee2e6;
+  --shadow: rgba(0, 0, 0, 0.1);
+  --shadow-lg: rgba(0, 0, 0, 0.15);
+  --card-bg: #ffffff;
+  --navbar-bg: #ffffff;
+}
+
+:root[data-theme="dark"] {
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #1a1a1a;
+  --bg-tertiary: #2a2a2a;
+  --text-primary: #f0f0f0;
+  --text-secondary: #a0a0a0;
+  --accent: #a855f7;
+  --accent-hover: #c084fc;
+  --border: #333333;
+  --shadow: rgba(0, 0, 0, 0.3);
+  --shadow-lg: rgba(0, 0, 0, 0.5);
+  --card-bg: #1a1a1a;
+  --navbar-bg: #0f0f0f;
+}
+
+/* Global Reset */
 * {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Base Styles for all screen sizes */
+/* Base Styles */
 body {
-    background-color: #ffffff;
-    color: #333;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
 }
 
-/* Global styles for 1080 x 2408 pixels resolution */
-@media screen and (min-width: 1080px) and (max-width: 2408px) {
-  /* Adjust global font sizes */
-  body {
-    font-size: 18px;
-  }
+html {
+  scroll-behavior: smooth;
+}
 
-  /* Example adjustments for headers */
-  h1 {
-    font-size: 3rem;
-  }
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--text-primary);
+}
 
-  h2 {
-    font-size: 2.5rem;
-  }
+h1 { font-size: clamp(2rem, 5vw, 3.5rem); }
+h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); }
+h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
 
-  h3 {
-    font-size: 2rem;
-  }
+p {
+  color: var(--text-secondary);
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+}
 
-  /* Buttons and Inputs */
-  button {
-    padding: 12px 24px;
-    font-size: 1.2rem;
-  }
+/* Links */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
 
-  /* Global layout adjustments */
+a:hover {
+  color: var(--accent-hover);
+}
+
+/* Buttons */
+button {
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-hover);
+}
+
+/* Selection */
+::selection {
+  background-color: var(--accent);
+  color: white;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Utility Classes */
+.fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.slide-in-right {
+  animation: slideInRight 0.6s ease-out forwards;
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.6s ease-out forwards;
+}
+
+.scale-in {
+  animation: scaleIn 0.5s ease-out forwards;
+}
+
+/* Responsive Media Queries */
+@media screen and (max-width: 768px) {
   .container {
-    width: 100%;
-    padding: 20px;
-    max-width: 1200px; /* Control container width */
-    margin: 0 auto;
+    padding: 0 15px;
   }
-
-  /* Example media query for responsiveness */
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  /* Navbar or header adjustments */
-  .navbar {
-    font-size: 1.5rem;
-    padding: 20px 0;
-  }
-
-  /* Footer adjustments */
-  .footer {
-    font-size: 1rem;
-    padding: 10px;
-  }
-
-  /* Other global elements you may want to adjust */
 }
 
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
   
+  .container {
+    padding: 0 12px;
+  }
+}

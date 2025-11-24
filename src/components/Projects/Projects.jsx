@@ -23,14 +23,14 @@ const projects = [
     description:
       "Bellefull Foods is a cutting-edge eCommerce platform that focuses on providing an exceptional food delivery experience. Offering a variety of local and international cuisines, it enables customers to easily browse, order, and track their meals. The platform ensures a seamless user experience with its user-friendly interface and secure payment options.",
     demoLink: "https://debcashealthcare.co.uk",
-    image: "/images/bellefull.png",
+    image: "/images/deb.png",
   },
    {
     name: "Uncle Ajala",
     description:
       "Bellefull Foods is a cutting-edge eCommerce platform that focuses on providing an exceptional food delivery experience. Offering a variety of local and international cuisines, it enables customers to easily browse, order, and track their meals. The platform ensures a seamless user experience with its user-friendly interface and secure payment options.",
     demoLink: "https://https://uncleajala.onrender.com/",
-    image: "/images/bellefull.png",
+    image: "/images/uncle.png",
   },
   {
     name: "Bellefull Foods",

@@ -1,42 +1,79 @@
 // eslint-disable-next-line no-unused-vars
-import React from "react";
-import "./Navbar.css";
-import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";
-import { FaGithub, FaLinkedin, FaEnvelope, FaWhatsapp } from "react-icons/fa";
+import React, { useState, useEffect } from 'react';
+import './Navbar.css';
+import HamburgerMenu from '../HamburgerMenu/HamburgerMenu';
+import { FaGithub, FaLinkedin, FaEnvelope, FaWhatsapp, FaSun, FaMoon } from 'react-icons/fa';
+import { useTheme } from '../../context/ThemeContext';
 
 const Navbar = () => {
+  const [scrolled, setScrolled] = useState(false);
+  const { isDark, toggleTheme } = useTheme();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <header className="navbar">
+    <header className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-left">
-        <HamburgerMenu /> {/* Only one instance of HamburgerMenu */}
-        <span className="name">DaleTech</span>
+        <HamburgerMenu />
+        <span className="name">
+          Dale<span className="name-accent">Tech</span>
+        </span>
       </div>
-      <div className="social-icons">
-        <a
-          href="https://github.com/Davefred-12"
-          target="_blank"
-          rel="noopener noreferrer"
+      
+      <div className="navbar-right">
+        <div className="social-icons">
+          <a
+            href="https://github.com/Davefred-12"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="social-link"
+            aria-label="GitHub"
+          >
+            <FaGithub />
+          </a>
+          <a 
+            href="mailto:adeleyepamilerin9@gmail.com"
+            className="social-link"
+            aria-label="Email"
+          >
+            <FaEnvelope />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/adewale-david-adeleye-108a61245"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="social-link"
+            aria-label="LinkedIn"
+          >
+            <FaLinkedin />
+          </a>
+          <a
+            href="https://wa.me/08165619543"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="social-link"
+            aria-label="WhatsApp"
+          >
+            <FaWhatsapp />
+          </a>
+        </div>
+
+        <button 
+          className="theme-toggle" 
+          onClick={toggleTheme}
+          aria-label="Toggle theme"
         >
-           <FaGithub style={{ color: '#333' }} /> {/* GitHub Icon Color */}
-        </a>
-        <a href="mailto:adeleyepamilerin9@gmail.com">
-        <FaEnvelope style={{ color: '#d44638' }} /> {/* Envelope (Email) Icon Color */}
-        </a>
-        <a
-          href="https://www.linkedin.com/in/adewale-david-adeleye-108a61245
-"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-        <FaLinkedin style={{ color: '#0077b5' }} /> {/* LinkedIn Icon Color */}
-        </a>
-        <a
-          href="https://wa.me/08165619543"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-        <FaWhatsapp style={{ color: '#25d366' }} /> {/* WhatsApp Icon Color */}
-        </a>
+          <div className="theme-toggle-icon">
+            {isDark ? <FaSun /> : <FaMoon />}
+          </div>
+        </button>
       </div>
     </header>
   );
