@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import { useInView } from "react-intersection-observer";
@@ -5,6 +6,21 @@ import "./Projects.css";
 import { FaExternalLinkAlt, FaCode, FaArrowRight } from "react-icons/fa";
 
 const projects = [
+  {
+    name: "TechAge Africa",
+    description:
+      "A full-stack learning management system (LMS) delivering tech education at scale. Features include course enrollment, video streaming, progress analytics, certificate generation, payment processing with Paystack, role-based access control, and cloud-based media management. Designed to empower African learners with market-relevant digital skills.",
+    tech: [
+      "React.js",
+      "Node.js",
+      "MongoDB",
+      "Express.js",
+      "Paystack",
+      "Cloudinary",
+    ],
+    demoLink: "https://techageafrica.netlify.app",
+    image: "/images/age.png",
+  },
   {
     name: "Mo Apartments",
     description:
@@ -107,7 +123,8 @@ const Projects = () => {
             Featured Projects
           </h2>
           <p className="projects-subtitle">
-            A showcase of real-world applications I've crafted—each solving unique challenges with elegant code and thoughtful design
+            A showcase of real-world applications I've crafted—each solving
+            unique challenges with elegant code and thoughtful design
           </p>
         </div>
 
@@ -152,7 +169,7 @@ const Projects = () => {
                   <div className="project-number">0{index + 1}</div>
                   <h3 className="project-name">{project.name}</h3>
                   <p className="project-description">{project.description}</p>
-                  
+
                   <div className="project-tech">
                     {project.tech.map((tech) => (
                       <span key={tech} className="tech-tag">
@@ -180,7 +197,10 @@ const Projects = () => {
         <div className="projects-cta">
           <FaCode className="cta-icon" />
           <h3>Want to See More?</h3>
-          <p>Check out my GitHub for additional projects and open-source contributions</p>
+          <p>
+            Check out my GitHub for additional projects and open-source
+            contributions
+          </p>
           <a
             href="https://github.com/Davefred-12"
             target="_blank"
