@@ -18,7 +18,7 @@ const projects = [
       "Paystack",
       "Cloudinary",
     ],
-    demoLink: "https://techageafrica.netlify.app",
+    demoLink: "https://techageafrica.com",
     image: "/images/age.png",
   },
   {
