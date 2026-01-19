@@ -19,7 +19,7 @@ const projects = [
       "Cloudinary",
     ],
     demoLink: "https://techageafrica.com",
-    image: "/images/age.png",
+    image: "/images/tech.png",
   },
   {
     name: "Mo Apartments",
@@ -45,6 +45,15 @@ const projects = [
     demoLink: "https://debcashealthcare.co.uk",
     image: "/images/deb.png",
   },
+  {
+    name: "Chatterra",
+    description:
+      "A real-time messaging platform designed for fast, secure, and meaningful conversations. Chatterra supports one-on-one and group chats, message reactions, media sharing, and online presence indicators. Built with a focus on performance, scalability, and user-friendly interaction, it creates a seamless communication experience across devices.",
+    tech: ["React", "Node.js", "Express", "MongoDB", "Socket.IO"],
+    demoLink: "https://chatterra.onrender.com/",
+    image: "/images/chat.png",
+  },
+
   {
     name: "Uncle Ajala",
     description:
