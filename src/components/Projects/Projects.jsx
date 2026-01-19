@@ -46,7 +46,7 @@ const projects = [
     image: "/images/deb.png",
   },
   {
-    name: "Chatterra",
+    name: "Chatlyx",
     description:
       "A real-time messaging platform designed for fast, secure, and meaningful conversations. Chatterra supports one-on-one and group chats, message reactions, media sharing, and online presence indicators. Built with a focus on performance, scalability, and user-friendly interaction, it creates a seamless communication experience across devices.",
     tech: ["React", "Node.js", "Express", "MongoDB", "Socket.IO"],
