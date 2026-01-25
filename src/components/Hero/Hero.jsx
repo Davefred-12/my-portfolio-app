@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 // eslint-disable-next-line no-unused-vars
 import React, { useEffect, useState } from 'react';
 import './Hero.css';
@@ -106,7 +107,7 @@ const Hero = () => {
           <div className="image-decoration decoration-1"></div>
           <div className="image-decoration decoration-2"></div>
           <img 
-            src="/images/pc.jpg" 
+            src="/images/Ade.PNG" 
             alt="Adewale Adeleye - Full Stack Developer" 
             className="hero-image" 
           />
